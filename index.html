@@ -17,23 +17,18 @@
   <div class="fallback" id="fallback">Načítavam stránku Apartmán 14…</div>
   <iframe id="app" title="Apartmán 14" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer"></iframe>
   <script>
-    const base = 'https://wczvonce.github.io/bracket-clicker-pages/ap14-k7x2/';
+    const pageWithCode = 'https://wczvonce.github.io/bracket-clicker-pages/ap14-k7x2/#4824';
     const frame = document.getElementById('app');
     const fallback = document.getElementById('fallback');
 
-    function loadApp() {
-      frame.src = base + window.location.hash;
-    }
+    frame.src = pageWithCode;
 
     frame.addEventListener('load', () => {
       fallback.style.display = 'none';
     });
-
-    window.addEventListener('hashchange', loadApp);
-    loadApp();
   </script>
   <noscript>
-    <div class="fallback">Pre otvorenie stránky povoľ JavaScript alebo otvor <a href="https://wczvonce.github.io/bracket-clicker-pages/ap14-k7x2/">pôvodnú verziu</a>.</div>
+    <div class="fallback">Pre otvorenie stránky povoľ JavaScript alebo otvor <a href="https://wczvonce.github.io/bracket-clicker-pages/ap14-k7x2/#4824">stránku s kódom 4824</a>.</div>
   </noscript>
 </body>
 </html>
