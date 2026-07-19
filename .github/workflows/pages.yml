@@ -24,12 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare Apartman 14 site
+      - name: Prepare site
         run: |
           mkdir -p _site
-          curl --fail --silent --show-error --location \
-            https://raw.githubusercontent.com/wczvonce/bracket-clicker-pages/main/ap14-k7x2/index.html \
-            --output _site/index.html
+          cp index.html _site/index.html
           touch _site/.nojekyll
 
       - name: Configure GitHub Pages
