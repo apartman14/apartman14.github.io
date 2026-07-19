@@ -7,28 +7,25 @@
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>Apartmán 14 · Školská 9</title>
   <style>
-    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #faf7f1; }
-    iframe { display: block; width: 100%; height: 100%; border: 0; background: #faf7f1; }
-    .fallback { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; font: 16px/1.5 system-ui, sans-serif; text-align: center; color: #22302c; background: #faf7f1; }
-    .fallback a { color: #1e3a34; font-weight: 700; }
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#faf7f1}
+    iframe{display:block;width:100%;height:100%;border:0;background:#faf7f1}
+    .fallback{position:fixed;inset:0;display:grid;place-items:center;padding:24px;font:16px/1.5 system-ui,sans-serif;text-align:center;color:#22302c;background:#faf7f1}
   </style>
 </head>
 <body>
   <div class="fallback" id="fallback">Načítavam stránku Apartmán 14…</div>
   <iframe id="app" title="Apartmán 14" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer"></iframe>
   <script>
-    const pageWithCode = 'https://wczvonce.github.io/bracket-clicker-pages/ap14-k7x2/#4824';
-    const frame = document.getElementById('app');
-    const fallback = document.getElementById('fallback');
-
-    frame.src = pageWithCode;
-
-    frame.addEventListener('load', () => {
-      fallback.style.display = 'none';
-    });
+    const frame=document.getElementById('app');
+    const fallback=document.getElementById('fallback');
+    const openPage=()=>{
+      const code=location.hash||'#4824';
+      frame.src='https://wczvonce.github.io/bracket-clicker-pages/apartman-14/'+code;
+    };
+    frame.addEventListener('load',()=>{fallback.style.display='none'});
+    window.addEventListener('hashchange',openPage);
+    openPage();
   </script>
-  <noscript>
-    <div class="fallback">Pre otvorenie stránky povoľ JavaScript alebo otvor <a href="https://wczvonce.github.io/bracket-clicker-pages/ap14-k7x2/#4824">stránku s kódom 4824</a>.</div>
-  </noscript>
+  <noscript><div class="fallback">Pre otvorenie stránky povoľte JavaScript.</div></noscript>
 </body>
 </html>
